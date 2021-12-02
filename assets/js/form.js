@@ -17,23 +17,12 @@ const ocultaralerta=()=>{
 
 
 const validarEmail=(email)=>{
-    if(email==""){
-        return false
-    }
-    else{
-        return true
-    }
+    return (email==="")?true:false
 }
 
 const validarPassword=(password)=>{
-    if(password==""){
-        return false
-    }
-    else{
-        return true
-    }
+    return (password==="")?true:false
 }
-
 /**
  * llamado a la función ocultaralerta
  */
@@ -42,9 +31,16 @@ ocultaralerta()
 
 blogin.addEventListener("click",(e)=>{
     e.preventDefault()
-    console.log(usuario.value)
-    console.log(password.value)
-    console.log(validarEmail(usuario.value))
-    console.log(validarPassword(password.value))
+    let err1=validarEmail(usuario.value)?"block":"none"
+    let err2=validarPassword(password.value)?"block":"none"
+    msjerr[0].style.display=err1
+    msjerr[1].style.display=err2
+    
 })
 
+usuario.addEventListener("click",()=>{
+    msjerr[0].style.display="none"
+})
+password.addEventListener("click",()=>{
+    msjerr[1].style.display="none"
+})

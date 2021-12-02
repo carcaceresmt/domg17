@@ -1,3 +1,26 @@
+body{
+    background-image: url("../img/sergio.png");
+    background-size: cover;
+    background-position: no-repeat;
+}
+
 .msjerr{
     color:red;
+}
+
+
+.forms{
+    background-color: rgb(235, 235, 236,0.7);
+    padding: 3% 2% 3% 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    /**
+    border
+    **/
+    -webkit-border-radius: 20px 20px 20px 20px;
+     border-radius: 20px 20px 20px 20px;
+
 }
